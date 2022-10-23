@@ -13,6 +13,7 @@
          <th>Size</th>
          <th>Image</th>
          <th>Price</th>
+         <th>Status</th>
          <th>Menu</th>
       </tr>
       <tr>
@@ -35,19 +36,19 @@
       <tr>
          <td>{{Name}}</td>
          <td>{{Size}}</td>
-         {{!-- <td>{{dateFormat Date "DD/MM/YYYY"}}</td> --}}
          <td>
             <img src="{{Image}}" width="100" height="100">
          </td>
          <td>{{Price}}</td>
          {{!-- <td>
-            {{#equal graduated true}}
-            <span style="color: red; font-weight: bold;">Graduated</span>
+            {{#equal Status true}}
+            <span style="color: red; font-weight: bold;">Stocking</span>
             {{/equal}}
-            {{#equal graduated false}}
-            <span style="color: blue; font-style: italic;">Ungraduated</span>
+            {{#equal Status false}}
+            <span style="color: blue; font-style: italic;">Sold out</span>
             {{/equal}}
          </td> --}}
+         <td>{{Status}}</td>
          <td>
             <a class="btn btn-warning" href="/product/edit/{{_id}}">EDIT</a>
             <a class="btn btn-danger" href="/product/delete/{{_id}}">DELETE</a>

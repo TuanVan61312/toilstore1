@@ -4,7 +4,9 @@ var ProductSchema = new mongoose.Schema({
     Name: String,
     Size: Number,
     Image: String,
-    Price: Number
+    Price: Number,
+    Status: String,
+    Suplier: String
 }, {
     versionKey: false //optional (to remove _v: 0 when add new data)
 })
