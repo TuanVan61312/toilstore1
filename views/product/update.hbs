@@ -1,40 +1,40 @@
 <div class="container col-md-8 mt-5">
-   <form action="/student/edit/{{student._id}}" method="post" class="card p-3 bg-light text-center">
-      <h2 class="text text-primary">Edit student</h2>
+   <form action="/product/edit/{{product._id}}" method="post" class="card p-3 bg-light text-center">
+      <h2 class="text text-primary">Edit product</h2>
       <div class="form-group">
-         <label class="text-success h6">Student Name</label>
-         <input class="form-control" type="text" name="Name" value="{{student.Name}}" required minlength="3"
+         <label class="text-success h6">product Name</label>
+         <input class="form-control" type="text" name="Name" value="{{product.Name}}" required minlength="3"
             maxlength="20">
       </div>
       <div class="form-group mt-3">
-         <label class="text-success h6">Student Email</label>
-         <input class="form-control" type="email" name="Email" value="{{student.Email}}" required minlength="3"
+         <label class="text-success h6">Product Size</label>
+         <input class="form-control" type="number" name="Size" value="{{product.Size}}" required minlength="3"
             maxlength="20">
       </div>
-      <div class="form-group mt-3">
+      {{!-- <div class="form-group mt-3">
          <label class="text-success h6">Student Gender</label>
          <br>
          Male <input type="radio" name="Gender" value="Male">
          Female <input type="radio" name="Gender" value="Female">
-         {{#equal student.Gender "Male"}}
+         {{#equal product.Gender "Male"}}
          Male <input type="radio" name="Gender" value="Male" checked>
          Female <input type="radio" name="Gender" value="Female">
          {{/equal}}
-         {{#equal student.Gender "Female"}}
+         {{#equal product.Gender "Female"}}
          Male <input type="radio" name="Gender" value="Male">
          Female <input type="radio" name="Gender" value="Female" checked>
          {{/equal}}
+      </div> --}}
+      <div class="form-group mt-3">
+         <label class="text-success h6">Product Image</label><br>
+         <img src="{{productt.Image}}" width="100" height="100">
+         <input class="form-control mt-3" type="text" name="Image" value="{{product.Image}}" required>
       </div>
       <div class="form-group mt-3">
-         <label class="text-success h6">Student Image</label><br>
-         <img src="{{student.Image}}" width="100" height="100">
-         <input class="form-control mt-3" type="text" name="Image" value="{{student.Image}}" required>
+         <label class="text-success h6">Product Price</label>
+         <input class="form-control" type="number" name="Price" value="{{product.Size}}" required min="1", max="3">
       </div>
-      <div class="form-group mt-3">
-         <label class="text-success h6">Student Birthday</label>
-         <input class="form-control" type="date" name="Date" value="{{dateFormat student.Date 'YYYY-MM-DD'}}" required>
-      </div>
-      <div class="form-group mt-3">
+      {{!-- <div class="form-group mt-3">
          <label class="text-success h6">Student Year</label>
          <select name="Year" class="form-control">
             <option value="">Select a year</option>
@@ -63,12 +63,12 @@
             <option value="4" selected>4</option>
             {{/equal}}
          </select>
-      </div>
-      <div class="form-group mt-3">
+      </div> --}}
+      {{!-- <div class="form-group mt-3">
          <label class="text-success h6">Student Grade</label>
          <input class="form-control" type="number" name="Grade" value="{{student.Grade}}" required min=0 max=10>
-      </div>
-      <div class="form-group mt-3">
+      </div> --}}
+      {{!-- <div class="form-group mt-3">
          <label class="text-success h6">Graduated</label>
          {{#equal student.graduated true}}
          <input type="checkbox" value="true" checked>
@@ -76,7 +76,7 @@
          {{#equal student.graduated false}}
          <input type="checkbox" value="false">
          {{/equal}}
-      </div>
+      </div> --}}
       <div class="form-group mt-3">
          <input class="btn btn-primary mt-3" type="submit" value="Edit">
       </div>

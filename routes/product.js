@@ -1,12 +1,12 @@
 const express = require('express')
-const StudentModel = require('../models/StudentModel')
+const ProductModel = require('../models/ProductModel')
 const router = express.Router()
 
 
 router.get('/drop', (req, res) => {
-    StudentModel.deleteMany({}, () => {
+    ProductModel.deleteMany({}, () => {
         console.log("Delete all data succeed !")
-        res.redirect('/student')
+        res.redirect('/product')
     })
 })
 
@@ -14,33 +14,33 @@ router.get('/drop', (req, res) => {
 
 //URL: localhost:3000/student
 router.get('/', (req, res) => {
-    StudentModel.find((err, data) => {
+    ProductModel.find((err, data) => {
         if (!err) {
             //res.send(data)
             //render ra trang index ở thư mục views/student
-            res.render('student/index', { student: data })
+            res.render('product/index', { product: data })
         }
     })
 })
 
 router.get('/list', (req, res) => {
-    StudentModel.find((err, data) => {
+    ProductModel.find((err, data) => {
         if (!err) {
-            res.render('student/list', { student: data, })
+            res.render('product/list', { product: data, })
         }
     })
 })
 
 
 router.get('/delete/:id', (req, res) => {
-    StudentModel.findByIdAndDelete(req.params.id, (err) => {
+    ProductModel.findByIdAndDelete(req.params.id, (err) => {
         if (err) {
             console.log(err)
         } else {
-            console.log("Delete student succeed !");
+            console.log("Delete product succeed !");
             //var message = "Delete student succeed !";
             //redirect về trang /student (URL không phải view)
-            res.redirect("/student");
+            res.redirect("/product");
         }
     })
 })
@@ -48,7 +48,7 @@ router.get('/delete/:id', (req, res) => {
 //render ra form ADD
 router.get('/add', (req, res) => {
 
-    res.render("student/new");
+    res.render("product/new");
 })
 
 //nhận & xử lý dữ liệu từ form ADD
@@ -64,22 +64,22 @@ router.post('/add', (req, res) => {
     //     }
     // })
     //Cách 2: dùng "create"
-    StudentModel.create(req.body, (err) => {
+    ProductModel.create(req.body, (err) => {
         if (!err) {
-            console.log('Add student succeed !')
-            res.redirect("/student")
+            console.log('Add product succeed !')
+            res.redirect("/product")
         }
     })
 })
 
 //render ra form EDIT
 router.get('/edit/:id', (req, res) => {
-    StudentModel.findById(req.params.id, (err, data) => {
+    ProductModel.findById(req.params.id, (err, data) => {
         if (!err) {
             //render ra file: update.hbs (trong thư mục views/student)
             //gửi kèm dữ liệu của object student để load vào form edit
             //student (tên) , data (dữ liệu)
-            res.render("student/update", { student: data })
+            res.render("product/update", { product: data })
         }
     })
 })
@@ -87,48 +87,48 @@ router.get('/edit/:id', (req, res) => {
 //nhận & xử lý dữ liệu từ form EDIT
 router.post('/edit/:id', (req, res) => {
     var id = req.params.id;
-    var student = req.body;
-    StudentModel.findByIdAndUpdate(id, student, (err) => {
+    var product = req.body;
+    ProductModel.findByIdAndUpdate(id, product, (err) => {
         if (!err) {
-            console.log("Update student succeed !")
-            res.redirect("/student")
+            console.log("Update product succeed !")
+            res.redirect("/product")
         }
     })
 })
 
 router.get('/detail/:id', (req, res) => {
-    StudentModel.findById(req.params.id, (err, student) => {
+    ProductModel.findById(req.params.id, (err, product) => {
         if (!err) {
-            res.render('student/info', { student: student })
+            res.render('product/info', { product: product })
         }
     })
 })
 
 //search function
 router.post('/search', (req, res) => {
-    StudentModel.find({ Name: new RegExp(req.body.Name, "i") }, (err, data) => {
+    ProductModel.find({ Name: new RegExp(req.body.Name, "i") }, (err, data) => {
         if (!err) {
-            res.render('student/index', { student: data })
+            res.render('product/index', {product: data })
         }
     })
 })
 //sort function
 router.get('/sort/asc', (req, res) => {
-    StudentModel.find()
+    ProductModel.find()
         .sort({ Name: 1 })
         .exec((err, data) => {
             if (!err) {
-                res.render('student/index', { student: data })
+                res.render('product/index', {product: data })
             }
         })
 })
 
 router.get('/sort/desc', (req, res) => {
-    StudentModel.find()
+    ProductModel.find()
         .sort({ Name: -1 })
         .exec((err, data) => {
             if (!err) {
-                res.render('student/index', { student: data })
+                res.render('product/index', { product: data })
             }
         })
 })

@@ -1,14 +1,14 @@
 <div class="container text-center">
    <div class="card-group">
       <div class="row">
-         {{#each student}}
+         {{#each product}}
          <div class="card col-md-3 m-3">
-            <a href="/student/detail/{{_id}}">
+            <a href="/product/detail/{{_id}}">
                <img class="card-img-top mt-4" src="{{Image}}" width="200" height="200">
             </a>
             <div class="card-body">
                <h4 class="card-title text-success">{{Name}}</h4>
-               <p class="card-text text-danger">{{Gender}}</p>
+               <p class="card-text text-danger">{{Price}}</p>
             </div>
          </div>
          {{/each}}
