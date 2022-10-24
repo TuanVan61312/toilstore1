@@ -5,10 +5,10 @@ var cookieParser = require('cookie-parser')
 var logger = require('morgan')
 
 var indexRouter = require('./routes/index')
-var studentRouter = require('./routes/student')
+var staffRouter = require('./routes/staff')
 var productRouter = require('./routes/product')
 var suplierRouter = require('./routes/suplier')
-var apiRouter = require('./routes/api')
+
 
 var mongoose = require('mongoose')
 var url =
@@ -50,10 +50,10 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', indexRouter)
-app.use('/student', studentRouter)
+app.use('/staff', staffRouter)
 app.use('/product', productRouter)
 app.use('/suplier', suplierRouter)
-app.use('/api', apiRouter)
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

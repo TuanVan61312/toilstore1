@@ -1,3 +1,4 @@
+
 <div class="container text-center">
    <div class="card-group">
       <div class="row">
@@ -8,10 +9,24 @@
             </a>
             <div class="card-body">
                <h4 class="card-title text-success">{{Name}}</h4>
-               <p class="card-text text-danger">{{Price}}</p>
+               {{!-- <p class="card-text text-danger">{{Price}}</p> --}}
+               <a href="/product/info/" class="btn btn-primary">{{Price}} 000$</a>
+               <a class="btn btn-primary" href="#" role="button">Add To Cart</a>
             </div>
          </div>
          {{/each}}
       </div>
    </div>
 </div>
+
+<style>
+   .card-group {
+         margin-right: 1px;
+         margin-top: 40px;
+         margin-left: 150px;
+
+   }
+</style>
+
+
+

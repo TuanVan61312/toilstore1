@@ -1,0 +1,29 @@
+<div class="container col-md-8 mt-5">
+   <form action="/staff/add" method="post" class="card p-3 bg-light text-center">
+      <h2 class="text text-primary">Add new staff</h2>
+      <div class="form-group">
+         <label class="text-success h6">Staff Name</label>
+         <input class="form-control" type="text" name="Name" required minlength="3" maxlength="20">
+      </div>
+      <div class="form-group mt-3">
+         <label class="text-success h6">Staff Email</label>
+         <input class="form-control" type="email" name="Email" required minlength="3" maxlength="20">
+      </div>
+      <div class="form-group mt-3">
+         <label class="text-success h6">Staff Gender</label><br>
+         Male <input type="radio" name="Gender" value="Male">
+         Female <input type="radio" name="Gender" value="Female">
+      </div>
+      <div class="form-group mt-3">
+         <label class="text-success h6">Staff Image</label>
+         <input class="form-control" type="text" name="Image" required>
+      </div>
+      <div class="form-group mt-3">
+         <label class="text-success h6">Staff Birthday</label>
+         <input class="form-control" type="date" name="Date" required>
+      </div>
+      <div class="form-group mt-3">
+         <input class="btn btn-primary mt-3" type="submit" value="Add">
+      </div>
+   </form>
+</div>

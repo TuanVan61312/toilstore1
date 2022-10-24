@@ -1,11 +1,11 @@
 <div class="container text-center col-md-10 text-center">
    <table class="table table-bordered bg-light p-4 mt-3 mb-3">
       <tr>
-         <th class="text-primary" colspan="5">Student List</th>
+         <th class="text-primary" colspan="5">Staff List</th>
          <th>
-            <a class="btn btn-primary" href="/student/add">ADD</a>
-            <a class="btn btn-success" href="/student/drop"
-               onclick="return confirm('Are you sure to drop all student ?');">DROP</a>
+            <a class="btn btn-primary" href="/staff/add">ADD</a>
+            <a class="btn btn-success" href="/staf/drop"
+               onclick="return confirm('Are you sure to drop all staff ?');">DROP</a>
          </th>
       </tr>
       <tr>
@@ -20,19 +20,19 @@
          <th colspan="5">
             <select class="form-control" onchange="window.location.href=this.value">
                <option value="">Sort by name</option>
-               <option value="/student/sort/asc">Ascending</option>
-               <option value="/student/sort/desc">Descending</option>
+               <option value="/staff/sort/asc">Ascending</option>
+               <option value="/staff/sort/desc">Descending</option>
             </select>
          </th>
          <th colspan="1">
-            <form action="/student/search" method="post">
+            <form action="/staff/search" method="post">
                <div class="form-group">
                   <input class="form-control" type="search" name="Name" placeholder="Search by name">
                </div>
             </form>
          </th>
       </tr>
-      {{#each student }}
+      {{#each staff }}
       <tr>
          <td>{{Name}}</td>
          <td>{{Gender}}</td>
@@ -40,17 +40,17 @@
          <td>
             <img src="{{Image}}" width="100" height="100">
          </td>
-         <td>
+         {{!-- <td>
             {{#equal graduated true}}
             <span style="color: red; font-weight: bold;">Graduated</span>
             {{/equal}}
             {{#equal graduated false}}
             <span style="color: blue; font-style: italic;">Ungraduated</span>
             {{/equal}}
-         </td>
+         </td> --}}
          <td>
-            <a class="btn btn-warning" href="/student/edit/{{_id}}">EDIT</a>
-            <a class="btn btn-danger" href="/student/delete/{{_id}}">DELETE</a>
+            <a class="btn btn-warning" href="/staff/edit/{{_id}}">EDIT</a>
+            <a class="btn btn-danger" href="/staff/delete/{{_id}}">DELETE</a>
          </td>
       </tr>
       {{/each}}
