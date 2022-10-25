@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<br>
 
 <head>
   <title>Toil Store</title>
@@ -7,81 +7,87 @@
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-   
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
 </head>
 
 <body>
   <header>
     <nav class="navbar navbar-dark bg-dark fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">ToilStore</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">ToilStore</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              {{!-- <li class="nav-item">
+                <a class="nav-link" href="/student/list">Customer</a>
+              </li> --}}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Store
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="/product/list">Product List</a></li>
+                  <li><a class="dropdown-item" href="/product">Product managment</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Staff
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="/staff/list">Staff List</a></li>
+                  <li><a class="dropdown-item" href="/staff">Staff management</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Suplier
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="/suplier/list">Suplier List</a></li>
+                  <li><a class="dropdown-item" href="/suplier">Suplier management</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
       </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
-          </li>
-          {{!-- <li class="nav-item">
-            <a class="nav-link" href="/student/list">Customer</a>
-          </li> --}}
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Store
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="/product/list">Product List</a></li>
-              <li><a class="dropdown-item" href="/product">Product managment</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Staff
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="/staff/list">Staff List</a></li>
-              <li><a class="dropdown-item" href="/staff">Staff info</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Suplier
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="/suplier/list">Suplier List</a></li>
-              <li><a class="dropdown-item" href="/suplier">Suplier info</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form class="d-flex mt-3" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-success" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</nav>
+    </nav>
   </header>
-  
+
 
   {{!-- render ra body của từng webpage --}}
   {{{body}}}
@@ -95,12 +101,10 @@
 
 </body>
 
-
+<div class="footer">
+  
   <!-- Footer -->
-  <footer
-          class="text-center text-lg-start text-white"
-          style="background-color: #45526e"
-          >
+  <footer class="text-center text-lg-start text-white" style="background-color: #45526e">
     <!-- Grid container -->
     <div class="container p-4 pb-0">
       <!-- Section: Links -->
@@ -109,14 +113,13 @@
         <div class="row">
           <!-- Grid column -->
           <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">
+            {{!-- <h6 class="text-uppercase mb-4 font-weight-bold">
               Company name
-            </h6>
-            <p>
-              Here you can use rows and columns to organize your footer
-              content. Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit.
-            </p>
+            </h6> --}}
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.6832051883744!2d105.80411511501234!3d21.005332286011015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac98b1cfa5e3%3A0xeb475e24d01f0c85!2zMlI0NCs0R1YsIDIzIMSQLiBMw6ogVsSDbiBMxrDGoW5nLCBOaMOibiBDaMOtbmgsIFRoYW5oIFh1w6JuLCBIw6AgTuG7mWkgMTAwMDAwLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1666690970720!5m2!1svi!2s"
+              width="300" height="300" style="border-radius:50%;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <!-- Grid column -->
 
@@ -126,16 +129,16 @@
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
             <p>
-              <a class="text-white">MDBootstrap</a>
+              <a class="text-white"></a>
             </p>
             <p>
-              <a class="text-white">MDWordPress</a>
+              <a class="text-white">CAR</a>
             </p>
             <p>
-              <a class="text-white">BrandFlow</a>
+              <a class="text-white">Leelamarz toy</a>
             </p>
             <p>
-              <a class="text-white">Bootstrap Angular</a>
+              <a class="text-white">maRZ toy</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -148,7 +151,7 @@
               Useful links
             </h6>
             <p>
-              <a class="text-white">Your Account</a>
+              <a href="/aboutus/" class="text-white">About us</a>
             </p>
             <p>
               <a class="text-white">Become an Affiliate</a>
@@ -167,8 +170,8 @@
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-            <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-            <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+            <p><i class="fas fa-home mr-3"></i> 23, LVL, TX, HN</p>
+            <p><i class="fas fa-envelope mr-3"></i> TOildStoRE@gmail.com</p>
             <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
             <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
           </div>
@@ -187,10 +190,8 @@
           <div class="col-md-7 col-lg-8 text-center text-md-start">
             <!-- Copyright -->
             <div class="p-3">
-              © 2020 Copyright:
-              <a class="text-white" href="https://mdbootstrap.com/"
-                 >MDBootstrap.com</a
-                >
+              © 2222 Copyright:
+              <a class="text-white" href="https://mdbootstrap.com/">TOilstore.com</a>
             </div>
             <!-- Copyright -->
           </div>
@@ -199,36 +200,20 @@
           <!-- Grid column -->
           <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
             <!-- Facebook -->
-            <a
-               class="btn btn-outline-light btn-floating m-1"
-               class="text-white"
-               role="button"
-               ><i class="fab fa-facebook-f"></i
-              ></a>
+            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                class="fab fa-facebook-f"></i></a>
 
             <!-- Twitter -->
-            <a
-               class="btn btn-outline-light btn-floating m-1"
-               class="text-white"
-               role="button"
-               ><i class="fab fa-twitter"></i
-              ></a>
+            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                class="fab fa-twitter"></i></a>
 
             <!-- Google -->
-            <a
-               class="btn btn-outline-light btn-floating m-1"
-               class="text-white"
-               role="button"
-               ><i class="fab fa-google"></i
-              ></a>
+            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                class="fab fa-google"></i></a>
 
             <!-- Instagram -->
-            <a
-               class="btn btn-outline-light btn-floating m-1"
-               class="text-white"
-               role="button"
-               ><i class="fab fa-instagram"></i
-              ></a>
+            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                class="fab fa-instagram"></i></a>
           </div>
           <!-- Grid column -->
         </div>
@@ -238,12 +223,25 @@
     <!-- Grid container -->
   </footer>
   <!-- Footer -->
+</div>
+<style>
+  .footer {
+    
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    
+  }
+</style>
 
 <!-- End of .container -->
 <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+<!-- Google fonts-->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+  type="text/css" />
+
 </html>

@@ -48,7 +48,7 @@ router.get('/delete/:id', (req, res) => {
 //render ra form ADD
 router.get('/add', (req, res) => {
 
-    res.render("sstaff/new");
+    res.render("staff/new");
 })
 
 //nhận & xử lý dữ liệu từ form ADD
@@ -87,7 +87,7 @@ router.get('/edit/:id', (req, res) => {
 //nhận & xử lý dữ liệu từ form EDIT
 router.post('/edit/:id', (req, res) => {
     var id = req.params.id;
-    var student = req.body;
+    var staff = req.body;
     StaffModel.findByIdAndUpdate(id, staff, (err) => {
         if (!err) {
             console.log("Update staff succeed !")

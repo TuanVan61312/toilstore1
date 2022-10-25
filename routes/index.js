@@ -7,6 +7,12 @@ router.get('/', (req, res) => {
   res.render('index')
 })
 
+//about
+router.get('/aboutus', (req, res) => {
+  //render ra trang index ở trong thư mục views
+  res.render('aboutus')
+})
+
 
 
 module.exports = router

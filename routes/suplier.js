@@ -87,7 +87,7 @@ router.get('/edit/:id', (req, res) => {
 //nhận & xử lý dữ liệu từ form EDIT
 router.post('/edit/:id', (req, res) => {
     var id = req.params.id;
-    var product = req.body;
+    var suplier = req.body;
     SuplierModel.findByIdAndUpdate(id,suplier, (err) => {
         if (!err) {
             console.log("Update suplier succeed !")
@@ -132,4 +132,5 @@ router.get('/sort/desc', (req, res) => {
             }
         })
 })
+
 module.exports = router

@@ -2,11 +2,13 @@
    <table class="table table-bordered bg-light p-4 mt-3 mb-3">
       <tr>
          <th class="text-primary" colspan="5">Staff List</th>
+         
          <th>
             <a class="btn btn-primary" href="/staff/add">ADD</a>
             <a class="btn btn-success" href="/staf/drop"
                onclick="return confirm('Are you sure to drop all staff ?');">DROP</a>
          </th>
+         
       </tr>
       <tr>
          <th>Name</th>
@@ -40,14 +42,7 @@
          <td>
             <img src="{{Image}}" width="100" height="100">
          </td>
-         {{!-- <td>
-            {{#equal graduated true}}
-            <span style="color: red; font-weight: bold;">Graduated</span>
-            {{/equal}}
-            {{#equal graduated false}}
-            <span style="color: blue; font-style: italic;">Ungraduated</span>
-            {{/equal}}
-         </td> --}}
+         <td></td>
          <td>
             <a class="btn btn-warning" href="/staff/edit/{{_id}}">EDIT</a>
             <a class="btn btn-danger" href="/staff/delete/{{_id}}">DELETE</a>
