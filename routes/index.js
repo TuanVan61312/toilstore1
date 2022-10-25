@@ -9,8 +9,14 @@ router.get('/', (req, res) => {
 
 //about
 router.get('/aboutus', (req, res) => {
-  //render ra trang index ở trong thư mục views
+  //render ra trang about us ở trong thư mục views
   res.render('aboutus')
+})
+
+//help
+router.get('/help', (req, res) => {
+  //render ra trang help ở trong thư mục views
+  res.render('help')
 })
 
 
