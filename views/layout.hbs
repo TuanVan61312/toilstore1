@@ -40,10 +40,10 @@
                 <ul class="dropdown-menu dropdown-menu-dark">
                   <li><a class="dropdown-item" href="/product/list">Product List</a></li>
                   <li><a class="dropdown-item" href="/product">Product managment</a></li>
-                  <li>
+                  {{!-- <li>
                     <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </li> --}}
+                  {{!-- <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -54,10 +54,10 @@
                 <ul class="dropdown-menu dropdown-menu-dark">
                   <li><a class="dropdown-item" href="/staff/list">Staff List</a></li>
                   <li><a class="dropdown-item" href="/staff">Staff management</a></li>
-                  <li>
+                  {{!-- <li>
                     <hr class="dropdown-divider">
                   </li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -68,10 +68,10 @@
                 <ul class="dropdown-menu dropdown-menu-dark">
                   <li><a class="dropdown-item" href="/suplier/list">Suplier List</a></li>
                   <li><a class="dropdown-item" href="/suplier">Suplier management</a></li>
-                  <li>
+                  {{!-- <li>
                     <hr class="dropdown-divider">
                   </li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
                 </ul>
               </li>
             </ul>
@@ -79,6 +79,7 @@
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-success" type="submit">Search</button>
             </form>
+            <button class="btn btn-success" type="submit"><i class="bi bi-box-arrow-right"></i>Search</button>
           </div>
         </div>
       </div>
@@ -223,11 +224,12 @@
 </div>
 <style>
   .footer {
-    
     bottom: 0;
     width: 100%;
     height: 60px;
-    
+  }
+  body{
+    background-color: #f07c0d8f;
   }
 </style>
 
