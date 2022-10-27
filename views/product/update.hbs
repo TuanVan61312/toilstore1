@@ -40,25 +40,25 @@
          <label class="text-success h6">Colors</label>
          <select name="Color" class="form-control">
             <option value="">Select a color</option>
-            {{#equal product.Color Black}}
+            {{#equal product.Color "Black"}}
             <option value="Black" selected>Black</option>
             <option value="White">White</option>
             <option value="Green">Green</option>
             <option value="Red">Red</option>
             {{/equal}}
-            {{#equal product.Color White}}
+            {{#equal product.Color "White"}}
             <option value="Black">Black</option>
             <option value="White" selected>White</option>
             <option value="Green">Green</option>
             <option value="Red">Red</option>
             {{/equal}}
-            {{#equal product.Color Green}}
+            {{#equal product.Color "Green"}}
             <option value="Black">Black</option>
             <option value="White">White</option>
             <option value="Green" selected>Green</option>
             <option value="Red">Red</option>
             {{/equal}}
-            {{#equal product.Color Red}}
+            {{#equal product.Color "Red"}}
             <option value="Black">Black</option>
             <option value="White">White</option>
             <option value="Green">Green</option>
