@@ -11,20 +11,7 @@
          <input class="form-control" type="number" name="Size" value="{{product.Size}}" required minlength="3"
             maxlength="20">
       </div>
-      {{!-- <div class="form-group mt-3">
-         <label class="text-success h6">Student Gender</label>
-         <br>
-         Male <input type="radio" name="Gender" value="Male">
-         Female <input type="radio" name="Gender" value="Female">
-         {{#equal product.Gender "Male"}}
-         Male <input type="radio" name="Gender" value="Male" checked>
-         Female <input type="radio" name="Gender" value="Female">
-         {{/equal}}
-         {{#equal product.Gender "Female"}}
-         Male <input type="radio" name="Gender" value="Male">
-         Female <input type="radio" name="Gender" value="Female" checked>
-         {{/equal}}
-      </div> --}}
+      
       <div class="form-group mt-3">
          <label class="text-success h6">Product Image</label><br>
          <img src="{{productt.Image}}" width="100" height="100">
@@ -34,45 +21,11 @@
          <label class="text-success h6">Product Price</label>
          <input class="form-control" type="number" name="Price" value="{{product.Size}}" required min="1", max="3">
       </div>
-      {{!-- <div class="form-group mt-3">
-         <label class="text-success h6">Student Year</label>
-         <select name="Year" class="form-control">
-            <option value="">Select a year</option>
-            {{#equal student.Year 1}}
-            <option value="1" selected>1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            {{/equal}}
-            {{#equal student.Year 2}}
-            <option value="1">1</option>
-            <option value="2" selected>2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            {{/equal}}
-            {{#equal student.Year 3}}
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3" selected>3</option>
-            <option value="4">4</option>
-            {{/equal}}
-            {{#equal student.Year 4}}
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4" selected>4</option>
-            {{/equal}}
-         </select>
-      </div> --}}
-      {{!-- <div class="form-group mt-3">
-         <label class="text-success h6">Student Grade</label>
-         <input class="form-control" type="number" name="Grade" value="{{student.Grade}}" required min=0 max=10>
-      </div> --}}
+      
       <div class="form-group mt-3">
          <label class="text-success h6">Status</label>
          <br>
-         {{!-- Stocking <input type="radio" name="Status" value="Stocking">
-         Sold out <input type="radio" name="Status" value="Sold out"> --}}
+         
          {{#equal product.Status "Stocking"}}
          Stocking <input type="radio" name="Status" value="Stocking" checked>
          Sold out <input type="radio" name="Status" value="Sold out">
