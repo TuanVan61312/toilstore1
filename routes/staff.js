@@ -12,12 +12,10 @@ router.get('/drop', (req, res) => {
 
 
 
-//URL: localhost:3000/student
+//URL: localhost:3000
 router.get('/', (req, res) => {
     StaffModel.find((err, data) => {
         if (!err) {
-            //res.send(data)
-            //render ra trang index ở thư mục views/student
             res.render('staff/index', { staff: data })
         }
     })
@@ -38,8 +36,6 @@ router.get('/delete/:id', (req, res) => {
             console.log(err)
         } else {
             console.log("Delete staff succeed !");
-            //var message = "Delete student succeed !";
-            //redirect về trang /student (URL không phải view)
             res.redirect("/staff");
         }
     })
@@ -54,13 +50,13 @@ router.get('/add', (req, res) => {
 //nhận & xử lý dữ liệu từ form ADD
 router.post('/add', (req, res) => {
     //Cách 1: dùng "save"
-    // var student = new StudentModel(req.body)
-    // student.save((err) => {
+    // var staff = new StaffModel(req.body)
+    // staff.save((err) => {
     //     if (err) {
     //         console.log(err)
     //     } else {
-    //         console.log("Add student succeed !")
-    //         res.redirect("/student")
+    //         console.log("Add staff succeed !")
+    //         res.redirect("/staff")
     //     }
     // })
     //Cách 2: dùng "create"
@@ -76,9 +72,6 @@ router.post('/add', (req, res) => {
 router.get('/edit/:id', (req, res) => {
     StaffModel.findById(req.params.id, (err, data) => {
         if (!err) {
-            //render ra file: update.hbs (trong thư mục views/student)
-            //gửi kèm dữ liệu của object student để load vào form edit
-            //student (tên) , data (dữ liệu)
             res.render("staff/update", { staff: data })
         }
     })
