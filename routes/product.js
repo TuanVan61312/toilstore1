@@ -43,7 +43,6 @@ router.get('/delete/:id', (req, res) => {
 
 //render ra form ADD
 router.get('/add', (req, res) => {
-
     res.render("product/new");
 })
 
